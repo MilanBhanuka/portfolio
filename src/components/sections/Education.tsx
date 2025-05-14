@@ -19,7 +19,7 @@ const educationData: Education[] = [
     degree: "Bachelor of Science in Computer Science",
     period: "2022 - 2025",
     description: "",
-    logo: "/src/Asstets/ucsc.png", 
+    logo: "/src/Asstets/ucsc.jpg", 
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const educationData: Education[] = [
     degree: "Pearson Assured Diploma in Software Engineering (DiSE)",
     period: "2020 - 2021",
     description: "",
-    logo: "/src/Asstets/esoft.png", 
+    logo: "/src/Asstets/esoft.jpg", 
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const educationData: Education[] = [
     degree: "G.C.E. Advanced Level",
     period: "2018 - 2021",
     description: "ICT : A | Combined Mathematics : B | Physics : C   - Z score 1.5918",
-    logo: "/src/Asstets/rahula.png",
+    logo: "/src/Asstets/rahula.jpg",
   },
 ];
 
