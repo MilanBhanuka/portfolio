@@ -73,9 +73,11 @@ const Hero: React.FC = () => {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <Button size="lg">View My Work</Button>
+            <Button size="lg">
+              <a href="#projects">View My Work</a>
+            </Button>
             <Button variant="outline" size="lg">
-              Contact Me
+              <a href="#contact">Get in Touch</a>
             </Button>
           </div>
 

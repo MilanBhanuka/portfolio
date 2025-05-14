@@ -77,7 +77,9 @@ const Navbar: React.FC = () => {
 
             <div className="flex items-center space-x-4">
               <ThemeToggle />
+              <a href="/src/Asstets/cv/Milan Bhanuka_CV.pdf" download>
               <Button>Download CV</Button>
+              </a>
             </div>
           </div>
 
@@ -125,7 +127,9 @@ const Navbar: React.FC = () => {
               </ul>
 
               <div className="mt-6 flex flex-col space-y-4">
-                <Button fullWidth>Download CV</Button>
+                <a href="/src/Asstets/cv/Milan Bhanuka_CV.pdf" download>
+                  <Button fullWidth>Download CV</Button>
+                </a>
                 <div className="flex justify-center space-x-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                   {socialLinks.map((link, index) => (
                     <motion.a
