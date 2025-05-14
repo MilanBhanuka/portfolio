@@ -2,6 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { fadeUpVariant, staggerContainer } from "../../utils/animations";
+import ucsclogo from "../../Asstets/ucsc.jpg";
+import esoflogo from "../../Asstets/esoft.jpg";
+import rahulalogo from "../../Asstets/rahula.jpg";
 
 interface Education {
   id: number;
@@ -19,7 +22,7 @@ const educationData: Education[] = [
     degree: "Bachelor of Science in Computer Science",
     period: "2022 - 2025",
     description: "",
-    logo: "/src/Asstets/ucsc.jpg", 
+    logo: ucsclogo, 
   },
   {
     id: 2,
@@ -27,7 +30,7 @@ const educationData: Education[] = [
     degree: "Pearson Assured Diploma in Software Engineering (DiSE)",
     period: "2020 - 2021",
     description: "",
-    logo: "/src/Asstets/esoft.jpg", 
+    logo: esoflogo,
   },
   {
     id: 3,
@@ -35,7 +38,7 @@ const educationData: Education[] = [
     degree: "G.C.E. Advanced Level",
     period: "2018 - 2021",
     description: "ICT : A | Combined Mathematics : B | Physics : C   - Z score 1.5918",
-    logo: "/src/Asstets/rahula.jpg",
+    logo: rahulalogo,
   },
 ];
 

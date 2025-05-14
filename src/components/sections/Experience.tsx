@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { fadeUpVariant, staggerContainer } from "../../utils/animations";
-
+import adlLogo from "../../Asstets/adl.webp"; // Import the logo image
 interface Experience {
   id: number;
   company: string;
@@ -18,7 +18,7 @@ const experienceData: Experience[] = [
     company: "Axiata Digital Labs",
     role: "Intern - Software Engineering",
     period: "Nov 2022 - Present",
-    logoUrl: "/src/Asstets/adl.webp",
+    logoUrl: adlLogo,
     responsibilities: [
       "Worked on frontend development using Angular 16, gaining a strong understanding of modern frontend practices.",
       "Developed and executed unit tests to ensure code quality and application stability.",
