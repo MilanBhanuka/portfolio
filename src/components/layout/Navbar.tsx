@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
 import { Menu, X, Github, Linkedin, Twitter } from "lucide-react";
 import Button from "../ui/Button";
+import cv from "../../Asstets/cv/Milan Bhanuka_CV.pdf";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +19,8 @@ const Navbar: React.FC = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const cvpdf = cv;
 
   const navLinks = [
     { name: "Home", href: "#home" },
@@ -77,7 +80,7 @@ const Navbar: React.FC = () => {
 
             <div className="flex items-center space-x-4">
               <ThemeToggle />
-              <a href="/src/Asstets/cv/Milan Bhanuka_CV.pdf" download>
+              <a href={cvpdf} download>
               <Button>Download CV</Button>
               </a>
             </div>
@@ -127,7 +130,7 @@ const Navbar: React.FC = () => {
               </ul>
 
               <div className="mt-6 flex flex-col space-y-4">
-                <a href="/src/Asstets/cv/Milan Bhanuka_CV.pdf" download>
+                <a href={cvpdf} download>
                   <Button fullWidth>Download CV</Button>
                 </a>
                 <div className="flex justify-center space-x-4 pt-4 border-t border-gray-200 dark:border-gray-700">
