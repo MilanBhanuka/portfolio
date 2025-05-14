@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { fadeUpVariant, staggerContainer } from "../../utils/animations";
 import Button from "../ui/Button";
 import { Mail, MapPin, Phone, Send, Check } from "lucide-react";
+import emailjs from "emailjs-com";
 
 const Contact: React.FC = () => {
   const [ref, inView] = useInView({
@@ -19,39 +20,47 @@ const Contact: React.FC = () => {
     {
       icon: <Mail size={24} />,
       title: "Email",
-      content: "hello@example.com",
-      link: "mailto:hello@example.com",
+      content: "vgmbhanuka@gmail.com",
+      link: "mailto:vgmbhanuka@gmail.com",
     },
     {
       icon: <Phone size={24} />,
       title: "Phone",
-      content: "+1 (123) 456-7890",
-      link: "tel:+11234567890",
+      content: "+94 71 6720 864",
+      link: "tel:+94716720864",
     },
-    {
-      icon: <MapPin size={24} />,
-      title: "Location",
-      content: "San Francisco, CA",
-      link: "https://maps.google.com",
-    },
+    // {
+    //   icon: <MapPin size={24} />,
+    //   title: "Location",
+    //   content: "San Francisco, CA",
+    //   link: "https://maps.google.com",
+    // },
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      formRef.current?.reset();
+  e.preventDefault();
+  setIsSubmitting(true);
 
-      // Reset success message after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 3000);
-    }, 1500);
-  };
+  emailjs
+    .sendForm(
+      "service_m939fn3",    // Replace with your EmailJS service ID
+      "template_1eg4pdo",   // Replace with your EmailJS template ID
+      formRef.current!,
+      "ei0iwVLeUBTShd-C_"        // Replace with your EmailJS user/public key
+    )
+    .then(
+      (result) => {
+        setIsSubmitting(false);
+        setIsSubmitted(true);
+        formRef.current?.reset();
+        setTimeout(() => setIsSubmitted(false), 3000);
+      },
+      (error) => {
+        setIsSubmitting(false);
+        alert("Failed to send message. Please try again.");
+      }
+    );
+};
 
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
