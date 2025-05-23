@@ -72,35 +72,13 @@ const Footer: React.FC = () => {
                 +94 71 6720 867<br />
                 +94 72 1704 598
               </li>
-              <li className="text-gray-600 dark:text-gray-400">
+              {/* <li className="text-gray-600 dark:text-gray-400">
                 San Francisco, CA
-              </li>
+              </li> */}
             </ul>
           </div>
 
-          {/* Newsletter */}
-          <div className="md:col-span-1">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Stay Updated
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-3">
-              Subscribe to my newsletter for the latest updates.
-            </p>
-            <form className="flex">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="flex-1 px-3 py-2 rounded-l-md border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-blue-500 focus:border-blue-500"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700 transition-colors"
-              >
-                Subscribe
-              </motion.button>
-            </form>
-          </div>
+         
         </div>
 
         <div className="mt-10 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center">
