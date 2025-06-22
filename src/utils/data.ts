@@ -9,29 +9,45 @@ import drowsiness from '../Asstets/drowsiness_detection_alert.jpg';
 
 // Projects data
 export const projects: Project[] = [
+  {
+    id: 5,
+    title: "Salon Booking System ",
+    description: "This full-stack Salon Booking System was designed to simplify the salon experience for both users and owners — combining powerful backend logic, sleek UI, and real-time updates into one seamless platform.",
+    image: "https://sdmntprwestcentralus.oaiusercontent.com/files/00000000-c1ac-61fb-814f-89c22dc0d9de/raw?se=2025-06-22T21%3A01%3A57Z&sp=r&sv=2024-08-04&sr=b&scid=7b15caa8-0d8f-575e-a871-5965cc7d589e&skoid=add8ee7d-5fc7-451e-b06e-a82b2276cf62&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-22T16%3A17%3A22Z&ske=2025-06-23T16%3A17%3A22Z&sks=b&skv=2024-08-04&sig=dcFSGVaSIsfodZDGLWV03oToPy0jLIYziGoW12DiESg%3D", 
+    tags: ["Spring Boot", "React", "Keycloak", "JWT", "RabbitMQ", "MySQL", "WebSocket", "Stripe", "Tailwind CSS", "Redux", "MUI"],
+    githubUrl: ["https://github.com/MilanBhanuka/Salon-Management-System-Backend"]
+  },
+  {
+    id: 6,
+    title: "Full-Stack Food Delivery Web Application",
+    description: "Built a modern, scalable, and secure food delivery platform with role-based access control for Customers and Restaurant Owners. The application enables seamless restaurant management, food ordering, and real-time event handling.",
+    image: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
+    tags: ["Spring Boot", "React", "Tailwind CSS", "JWT", "Stripe", "Redux", "MUI", "MySQL", "RabbitMQ"],
+    githubUrl: ["https://github.com/MilanBhanuka/online-food-ordering-frontend", "https://github.com/MilanBhanuka/Online-Food-Ordering"]
+  },
  {
     id: 1,
     title: "MetaNet",
     description: "centralized web platform built to transform the XR (Extended Reality) content-sharing ecosystem to empower creators and users.",
     image: metanet,
     tags: ["Angular", "Nest.js", "Tailwind CSS", "PostgreSQ"],
-    githubUrl: "https://github.com/MetaNet9/MetaNet_Frontend"
+    githubUrl: ["https://github.com/MetaNet9/MetaNet_Frontend"]
   },
   {
     id: 2,
     title: "EatzOn - Food Delivery Website",
     description: "A full-stack food delivery platform designed to streamline the online ordering experience for restaurants and their customers. ",
     image: eatzon,
-    tags: ["React", "Tailwind CSS", "Express", "Node.js", "MongoDB","MERN"],
-    githubUrl: "https://github.com/MilanBhanuka/EatzOn"
+    tags: ["React", "Node.js", "MongoDB","Tailwind CSS", "Express", "MERN"],
+    githubUrl: ["https://github.com/MilanBhanuka/EatzOn"]
   },
    {
     id: 3,
     title: "C&A Indoor Cricket Net Company Management System & e-commerce platform",
     description: "A comprehensive system to support the business process of C&A Indoor Cricket Stadium by providing a robust reservation system and an e-commerce platform as a solution for the manually handled system. ",
     image: caLogo,
-    tags: ["HTML", "CSS", "Javascript", "PHP", "MySQL"],
-    githubUrl: "https://github.com/MilanBhanuka/CA-Indoor-Project"
+    tags: ["PHP","HTML", "CSS", "Javascript",  "MySQL"],
+    githubUrl: ["https://github.com/MilanBhanuka/CA-Indoor-Project"]
   },
   {
     id:4,
@@ -39,8 +55,7 @@ export const projects: Project[] = [
     description: "a real-time drowsy driver detection system using Python. The system monitors the driver’s eye aspect ratio (EAR) to detect signs of drowsiness and sounds an alarm if the driver shows signs of fatigue.",
     image: drowsiness,
     tags: ["Python", "OpenCV", "Image Processing"],
-
-    githubUrl: "https://github.com/MilanBhanuka/Drowsiness-detection-with-OpenCV"
+    githubUrl: ["https://github.com/MilanBhanuka/Drowsiness-detection-with-OpenCV"]
   },
   // {
   //   id:4,
