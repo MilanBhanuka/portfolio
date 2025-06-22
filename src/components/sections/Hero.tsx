@@ -4,6 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import Button from "../ui/Button";
 import { ArrowDownCircle, Github, Linkedin, Twitter } from "lucide-react";
 import profileImg from "../../Asstets/profile.jpg";
+import {BackgroundBeamsWithCollision} from "../ui/background-beams-with-collision";
 
 
 const Hero: React.FC = () => {
@@ -13,10 +14,12 @@ const Hero: React.FC = () => {
   ];
 
   return (
+    
     <section
       id="home"
-      className="relative min-h-screen flex items-center py-20 overflow-hidden"
+      className="relative min-h-screen flex items-center lg:pt-0 pt-20 overflow-hidden"
     >
+      <BackgroundBeamsWithCollision>
       {/* Background with subtle animation */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800"></div>
@@ -145,7 +148,9 @@ const Hero: React.FC = () => {
         <span className="text-sm mb-2">Scroll Down</span>
         <ArrowDownCircle size={20} />
       </motion.a>
+      </BackgroundBeamsWithCollision>
     </section>
+    
   );
 };
 
