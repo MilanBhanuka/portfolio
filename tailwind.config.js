@@ -2,7 +2,7 @@
 import tailwindcssAnimate from "tailwindcss-animate";
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: ['class', 'class'],
+  darkMode: "class",
   theme: {
   	extend: {
   		fontFamily: {
@@ -88,4 +88,6 @@ export default {
   	}
   },
   plugins: [tailwindcssAnimate],
+	// plugins: [require("tailwindcss-animate")],
+
 };
