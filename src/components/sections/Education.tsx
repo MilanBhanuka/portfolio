@@ -91,7 +91,7 @@ const Education: React.FC = () => {
             <motion.div
               key={edu.id}
               variants={fadeUpVariant}
-              className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow relative overflow-hidden"
+              className="bg-gradient-to-br from-blue-50/60 via-white/80 to-blue-100/60 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900  rounded-lg shadow-lg hover:shadow-xl transition-shadow relative overflow-hidden"
             >
               {/* Logo watermark in background */}
               {/* <div className="absolute -right-6 -bottom-6 opacity-5">
@@ -103,7 +103,7 @@ const Education: React.FC = () => {
               </div> */}
               
               {/* Card header with logo */}
-              <div className="flex items-center mb-4 pb-4 border-b border-gray-200 dark:border-gray-700">
+              <div className="p-6 flex items-center mb-4 pb-4 border-b bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700">
                 <div className="mr-4 flex-shrink-0">
                   <img 
                     src={edu.logo} 
@@ -122,10 +122,10 @@ const Education: React.FC = () => {
               </div>
               
               {/* Card content */}
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 px-6 ">
                 {edu.degree}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300 px-6 mb-6">
                 {edu.description}
               </p>
             </motion.div>

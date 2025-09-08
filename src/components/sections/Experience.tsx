@@ -2,7 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { fadeUpVariant, staggerContainer } from "../../utils/animations";
-import adlLogo from "../../Asstets/adl.webp"; // Import the logo image
+import adlLogo from "../../Asstets/adl.webp"; 
+import cf from "../../Asstets/cf.png";
+
+
 interface Experience {
   id: number;
   company: string;
@@ -14,30 +17,29 @@ interface Experience {
 
 const experienceData: Experience[] = [
   {
+    id: 2,
+    company: "Central Finance Company PLC",
+    role: "Associate Software Engineer",
+    period: "Sep 2025 - present",
+    logoUrl: cf,
+    responsibilities: [
+    ],
+  },
+  {
     id: 1,
     company: "Axiata Digital Labs",
     role: "Intern - Software Engineering",
-    period: "Nov 2022 - Present",
+    period: "Nov 2022 - Aug 2025",
     logoUrl: adlLogo,
     responsibilities: [
       "Worked on frontend development using Angular 16, gaining a strong understanding of modern frontend practices.",
       "Developed and executed unit tests to ensure code quality and application stability.",
       "Integrated APIs into projects, collaborating closely with backend teams.",
-      "Conducted research and development tasks focused on upgrading projects from Angular 16 to Angular 17."
+      "Conducted research and development tasks focused on upgrading projects from Angular 16 to Angular 17 for micro frontend with native federation.",
+      "Successfully upgraded Angular 16 micro frontend project into Angular 17"
     ],
   },
-  // {
-  //   id: 2,
-  //   company: "Startup Inc",
-  //   role: "Junior Developer",
-  //   period: "2021 - 2022",
-  //   logoUrl: "/images/startup-logo.png",
-  //   responsibilities: [
-  //     "Built and maintained company website using JavaScript and CSS",
-  //     "Integrated REST APIs for dynamic content delivery",
-  //     "Participated in agile development processes and code reviews",
-  //   ],
-  // },
+  
 ];
 
 const Experience: React.FC = () => {
@@ -89,10 +91,10 @@ const Experience: React.FC = () => {
             <motion.div
               key={exp.id}
               variants={fadeUpVariant}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
+              className=" bg-gradient-to-br from-blue-50/60 via-white/80 to-blue-100/60 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
             >
               {/* Header Section with Logo, Company, Role, and Period */}
-              <div className="bg-gray-50 dark:bg-gray-700 p-6 border-b border-gray-200 dark:border-gray-600">
+              <div className="bg-gray-50 dark:bg-gray-800 p-6 border-b border-gray-200 dark:border-gray-600">
                 <div className="flex flex-col md:flex-row md:items-center gap-4">
                   {/* Logo */}
                   <div className="flex-shrink-0">

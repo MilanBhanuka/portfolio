@@ -32,3 +32,22 @@ export interface BlogPost {
   image: string;
   url: string;
 }
+
+export interface Certificate {
+  id: number;
+  title: string;
+  issuer: string;
+  issueDate: string;
+  expiryDate?: string;
+  credentialUrl?: string;
+  image?: string;
+}
+
+export interface Award {
+  id: number;
+  title: string;
+  issuer: string;
+  date: string;
+  description?: string;
+  image?: string;
+}

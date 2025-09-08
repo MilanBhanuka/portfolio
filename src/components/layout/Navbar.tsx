@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
-import { Menu, X, Github, Linkedin, Twitter } from "lucide-react";
+import { Menu, X, Github, Linkedin, Twitter ,Download} from "lucide-react";
 import Button from "../ui/Button";
 import cv from "../../Asstets/cv/Milan Bhanuka_CV.pdf";
 
@@ -24,13 +24,11 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: "Home", href: "#home" },
-    // { name: "About", href: "#about" },
+    { name: "About", href: "#about" },
     { name: "Education", href: "#education" },
     { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
     // { name: "Services", href: "#services" },
-   
-    
     // { name: "Testimonials", href: "#testimonials" },
     // { name: "Blog", href: "#blog" },
     // { name: "Contact", href: "#contact" },
@@ -79,10 +77,13 @@ const Navbar: React.FC = () => {
             </ul>
 
             <div className="flex items-center space-x-4">
-              <ThemeToggle />
+              
               <a href={cvpdf} download>
-              <Button>Download CV</Button>
+                <Button icon={<Download size={18} />}>
+                      Download CV
+                </Button>
               </a>
+              <ThemeToggle />
             </div>
           </div>
 
@@ -131,7 +132,9 @@ const Navbar: React.FC = () => {
 
               <div className="mt-6 flex flex-col space-y-4">
                 <a href={cvpdf} download>
-                  <Button fullWidth>Download CV</Button>
+                  <Button icon={<Download size={18} />}>
+                    Download CV
+                  </Button>
                 </a>
                 <div className="flex justify-center space-x-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                   {socialLinks.map((link, index) => (

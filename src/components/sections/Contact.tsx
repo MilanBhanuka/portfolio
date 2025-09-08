@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
 };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div
         ref={ref}
         className="container mx-auto px-4 md:px-6"
