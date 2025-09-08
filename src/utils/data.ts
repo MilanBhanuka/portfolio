@@ -17,7 +17,7 @@ export const projects: Project[] = [
     description: "This full-stack Salon Booking System was designed to simplify the salon experience for both users and owners — combining powerful backend logic, sleek UI, and real-time updates into one seamless platform.",
     image: salon, 
     tags: ["Spring Boot", "React", "Keycloak", "JWT", "RabbitMQ", "MySQL", "WebSocket", "Stripe", "Tailwind CSS", "Redux", "MUI","Micro Service"],
-    githubUrl: ["https://github.com/MilanBhanuka/Salon-Management-System-Backend"]
+    githubUrl: ["https://github.com/MilanBhanuka/Salon-Management-System-Backend","https://github.com/MilanBhanuka/salon-management-system-frontend"]
   },
   {
     id: 6,
