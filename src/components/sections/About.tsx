@@ -12,7 +12,7 @@ const About: React.FC = () => {
   });
 
   const skills = [
-    "HTML/CSS", "JavaScript", "TypeScript", "React", "Next.js", 
+    "HTML/CSS", "JavaScript", "TypeScript", "React", "Next.js",
     "Node.js", "Express", "MongoDB", "UI/UX Design", "Figma",
     "Tailwind CSS", "GraphQL", "AWS", "Git", "REST APIs"
   ];
@@ -83,17 +83,17 @@ const About: React.FC = () => {
               variants={fadeUpVariant}
               className="text-gray-600 dark:text-gray-400 mb-6"
             >
-              I'm a passionate full-stack developer with expertise in creating beautiful, 
-              functional, and user-centered digital experiences. With 5+ years of 
-              experience in web development and design, I love turning complex problems 
+              I'm a passionate full-stack developer with expertise in creating beautiful,
+              functional, and user-centered digital experiences. With 5+ years of
+              experience in web development and design, I love turning complex problems
               into simple, beautiful, and intuitive designs.
             </motion.p>
             <motion.p
               variants={fadeUpVariant}
               className="text-gray-600 dark:text-gray-400 mb-8"
             >
-              My approach combines technical expertise with creative problem-solving. 
-              I'm dedicated to continuous learning and staying updated with the latest 
+              My approach combines technical expertise with creative problem-solving.
+              I'm dedicated to continuous learning and staying updated with the latest
               technologies and design trends to deliver cutting-edge solutions.
             </motion.p>
 

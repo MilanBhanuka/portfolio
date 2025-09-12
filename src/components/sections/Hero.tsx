@@ -149,6 +149,7 @@ const Hero: React.FC = () => {
         <ArrowDownCircle size={20} />
       </motion.a>
       </BackgroundBeamsWithCollision>
+
     </section>
     
   );
