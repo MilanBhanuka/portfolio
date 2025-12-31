@@ -23,13 +23,15 @@ const experienceData: Experience[] = [
     period: "Sep 2025 - present",
     logoUrl: cf,
     responsibilities: [
+      "Working on Saving System project using Angular 17, Spring Boot",
+      "Designed and implemented automated document generation for financial documents and transaction slips using Jaspersoft Studios, reducing manual processing time",
     ],
   },
   {
     id: 1,
     company: "Axiata Digital Labs",
     role: "Intern - Software Engineering",
-    period: "Nov 2022 - Aug 2025",
+    period: "Nov 2024 - Aug 2025",
     logoUrl: adlLogo,
     responsibilities: [
       "Worked on frontend development using Angular 16, gaining a strong understanding of modern frontend practices.",

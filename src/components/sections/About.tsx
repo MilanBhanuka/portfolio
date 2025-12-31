@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { fadeUpVariant, staggerContainer, itemVariant } from "../../utils/animations";
 import { Download, Award, Briefcase, GraduationCap } from "lucide-react";
 import Button from "../ui/Button";
+import cv from "../../Asstets/cv/Milan Bhanuka_CV.pdf";
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({
@@ -11,14 +12,13 @@ const About: React.FC = () => {
     triggerOnce: true,
   });
 
+  const cvpdf = cv;
+
   const skills = [
-    "HTML/CSS", "JavaScript", "TypeScript", "React", "Next.js",
-    "Node.js", "Express", "MongoDB", "UI/UX Design", "Figma",
-    "Tailwind CSS", "GraphQL", "AWS", "Git", "REST APIs"
-  ];
+    "Spring Boot", "Angular", "TypeScript", "React", "MySQL", "Node.js", "Next.js",];
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="about" className="py-20 bg-white dark:bg-gray-800">
       <div
         ref={ref}
         className="container mx-auto px-4 md:px-6"
@@ -56,14 +56,14 @@ const About: React.FC = () => {
             className="relative"
           >
             <div className="relative max-w-md mx-auto lg:ml-auto">
-              <div className="relative z-10 overflow-hidden rounded-lg shadow-xl">
+              <div className="relative z-10 overflow-hidden rounded-lg shadow-xl bg-gradient-to-br from-blue-500 to-purple-600 p-1">
                 <img
-                  src="https://images.pexels.com/photos/11805196/pexels-photo-11805196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  src="https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-6/548219604_1994515341344048_6744327875503527470_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGBgA85ho0ojy-cXIMSTfwWooM_ErQWp9Oigz8StBan02fc1FpM8A-yHQPcYrjXYhChqmGRwOkzgRXoGQvvaRea&_nc_ohc=SpGx0yxTZXsQ7kNvwH8dm7B&_nc_oc=Adlg27cwBg5_vauv8TasSlPFdHdi8mwIUl2XvlnIHfogI0ArCl7I775Vm0GFNoixlTbR6opg18wq6x8IXAjHOEMh&_nc_zt=23&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=3wRv9StoSxY4ow-3SHIepA&oh=00_AfkMkSyKxXDv30wIYUSBVljHXg81edQL4FnD-H5qiJWJpA&oe=695AB200"
                   alt="About Me"
                   className="w-full h-auto"
                 />
               </div>
-              <div className="absolute top-0 left-0 w-full h-full border-8 border-blue-600 dark:border-blue-500 rounded-lg transform translate-x-6 translate-y-6 -z-10"></div>
+              <div className="absolute top-0 left-0 w-full h-full border-8 border-blue-500 dark:border-blue-500 rounded-lg transform translate-x-6 translate-y-6 -z-10"></div>
             </div>
           </motion.div>
 
@@ -83,18 +83,15 @@ const About: React.FC = () => {
               variants={fadeUpVariant}
               className="text-gray-600 dark:text-gray-400 mb-6"
             >
-              I'm a passionate full-stack developer with expertise in creating beautiful,
-              functional, and user-centered digital experiences. With 5+ years of
-              experience in web development and design, I love turning complex problems
-              into simple, beautiful, and intuitive designs.
+              I'm a full‑stack developer with 1+ years industry experience building production web applications using Spring Boot, Angular. 
+              I focus on designing scalable backends, performant frontends, and intuitive user experiences that solve real problems.
             </motion.p>
             <motion.p
               variants={fadeUpVariant}
               className="text-gray-600 dark:text-gray-400 mb-8"
             >
-              My approach combines technical expertise with creative problem-solving.
-              I'm dedicated to continuous learning and staying updated with the latest
-              technologies and design trends to deliver cutting-edge solutions.
+              I enjoy leading projects end‑to‑end, collaborating with designers and product teams,
+               and continuously improving systems through testing, refactoring, and automation. 
             </motion.p>
 
             {/* Skills */}
@@ -110,7 +107,7 @@ const About: React.FC = () => {
                   <motion.span
                     key={index}
                     variants={itemVariant}
-                    className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-3 py-1.5 rounded-full text-sm"
+                    className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200 px-3 py-1.5 rounded-full text-sm"
                   >
                     {skill}
                   </motion.span>
@@ -123,32 +120,29 @@ const About: React.FC = () => {
               variants={fadeUpVariant}
               className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8"
             >
-              <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <div className="text-center p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
                 <Award className="w-10 h-10 text-blue-600 dark:text-blue-500 mx-auto mb-2" />
-                <h5 className="font-bold text-2xl text-gray-900 dark:text-white">5+</h5>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Years Experience</p>
+                <h5 className="font-bold text-2xl text-gray-900 dark:text-white">1+ Years </h5>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Industry Experience</p>
               </div>
-              <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <div className="text-center p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
                 <Briefcase className="w-10 h-10 text-blue-600 dark:text-blue-500 mx-auto mb-2" />
-                <h5 className="font-bold text-2xl text-gray-900 dark:text-white">20+</h5>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Projects</p>
+                <h5 className="font-bold text-2xl text-gray-900 dark:text-white">5+</h5>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Personal Projects</p>
               </div>
-              <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <div className="text-center p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
                 <GraduationCap className="w-10 h-10 text-blue-600 dark:text-blue-500 mx-auto mb-2" />
                 <h5 className="font-bold text-2xl text-gray-900 dark:text-white">BSc</h5>
                 <p className="text-sm text-gray-600 dark:text-gray-400">Computer Science</p>
               </div>
-              <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <Award className="w-10 h-10 text-blue-600 dark:text-blue-500 mx-auto mb-2" />
-                <h5 className="font-bold text-2xl text-gray-900 dark:text-white">3</h5>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Awards</p>
-              </div>
             </motion.div>
 
             <motion.div variants={fadeUpVariant}>
-              <Button icon={<Download size={18} />}>
-                Download CV
-              </Button>
+              <a href={cvpdf} download>
+                <Button icon={<Download size={18} />}>
+                      Download CV
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
         </div>

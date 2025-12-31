@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/portfolio',
   optimizeDeps: {
-    exclude: ['lucide-react'],
+    include: ['lucide-react'],
   },
 });

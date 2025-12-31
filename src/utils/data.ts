@@ -11,6 +11,15 @@ import restaurent from '../Asstets/restaurent.png';
 
 // Projects data
 export const projects: Project[] = [
+
+  {
+    id: 7,
+    title: "POS System",
+    description: " scalable, multi-store Point of Sale (POS) backend system built with Spring Boot. POS supports stores, branches, cashiers, inventory, subscriptions, analytics, and payments, designed for real-world retail use cases.",
+    image: "",
+    tags: ["Spring Boot", "React", "Tailwind CSS", "MySQL ", "Redux", "MUI", "JWT",],
+    githubUrl: ["https://github.com/MilanBhanuka/POS"]
+  },
   {
     id: 5,
     title: "Salon Booking System ",
