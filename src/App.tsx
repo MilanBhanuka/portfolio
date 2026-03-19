@@ -8,24 +8,19 @@ import Footer from './components/layout/Footer';
 import Education from './components/sections/Education';
 import Experience from './components/sections/Experience';
 import About from './components/sections/About';
-import Services from './components/sections/Services';
 
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+      <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
         <Navbar />
         <main>
           <Hero />
           <About />
           <Experience />
           <Education />
-          {/* <Services /> */}
           <Projects />
           <TechStack />
-
-          {/* <Testimonials /> */}
-          {/* <Blog /> */}
           <Contact />
         </main>
         <Footer />

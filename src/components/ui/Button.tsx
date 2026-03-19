@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "outline";
+  variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   className?: string;
   onClick?: () => void;
@@ -24,44 +24,39 @@ const Button: React.FC<ButtonProps> = ({
   icon,
   fullWidth = false,
 }) => {
-  // Base styles
-  const baseStyles = "rounded-md font-medium transition-all duration-300 flex items-center justify-center";
-  
-  // Size styles
-  const sizeStyles = {
-    sm: "px-3 py-1.5 text-sm",
-    md: "px-4 py-2 text-base",
-    lg: "px-6 py-3 text-lg",
-  };
-  
-  // Variant styles
-  const variantStyles = {
-    primary: "bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600",
-    secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600",
-    outline: "border-2 border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-500 dark:text-blue-400 dark:hover:bg-gray-800",
-  };
-  
-  // Disabled styles
-  const disabledStyles = disabled
-    ? "opacity-50 cursor-not-allowed"
-    : "cursor-pointer";
-  
-  // Width styles
-  const widthStyles = fullWidth ? "w-full" : "";
+  const base =
+    "relative rounded-xl font-semibold transition-all duration-200 flex items-center justify-center gap-2 overflow-hidden select-none";
 
-  // Combine all styles
-  const buttonStyles = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${disabledStyles} ${widthStyles} ${className}`;
+  const sizes = {
+    sm: "px-4 py-2 text-sm",
+    md: "px-5 py-2.5 text-base",
+    lg: "px-7 py-3.5 text-base",
+  };
+
+  const variants = {
+    primary:
+      "bg-gradient-to-r from-indigo-500 to-violet-600 text-white shadow-lg shadow-indigo-500/30 hover:from-indigo-600 hover:to-violet-700 hover:shadow-indigo-500/50",
+    secondary:
+      "bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-100 dark:hover:bg-indigo-900/50",
+    outline:
+      "bg-transparent border-2 border-indigo-500/60 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50/60 dark:hover:bg-indigo-950/40 hover:border-indigo-500",
+    ghost:
+      "bg-transparent text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5",
+  };
+
+  const disabledCls = disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer";
+  const widthCls = fullWidth ? "w-full" : "";
 
   return (
     <motion.button
       type={type}
-      className={buttonStyles}
+      className={`${base} ${sizes[size]} ${variants[variant]} ${disabledCls} ${widthCls} ${className}`}
       onClick={onClick}
       disabled={disabled}
-      whileTap={{ scale: disabled ? 1 : 0.97 }}
-      whileHover={{ scale: disabled ? 1 : 1.03 }}
+      whileHover={disabled ? {} : { scale: 1.04 }}
+      whileTap={disabled ? {} : { scale: 0.97 }}
     >
-      {icon && <span className="mr-2">{icon}</span>}
+      {icon && <span className="flex-shrink-0">{icon}</span>}
       {children}
     </motion.button>
   );
